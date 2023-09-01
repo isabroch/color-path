@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#scene {
+    max-width: 90%;
+    margin: auto;
+}
+
+#grid {
+    border: 1px solid silver;
+    margin-block-start: 1rem;
+}
+
+.message {
+    text-align: center;
+    margin-block-start: 1rem;
+    margin-inline: 0.5em;
+    height: 1rem;
+    color: darkgray;
+}
+
+#settings:modal {
+    all: unset;
+    background: white;
+    inset-block: 0;
+    padding: 1rem;
+}
+
+#settings form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+#settings form > div {
+    display: grid;
+    gap:0.5em;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 / -1;
+}
+
+#settings .buttons {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+}

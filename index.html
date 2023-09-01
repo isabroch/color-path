@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Path</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="scene">
+        <canvas id="grid"></canvas>
+        <div class="message"></div>
+    </div>
+
+    <dialog id="settings">
+        <form id="settingsMenu" method="dialog">
+            <div>
+                <label for="gridCount">Grid Count (rows and cols)</label>
+                <input type="number" name="gridCount" id="gridCount" value="20" min="2">
+            </div>
+            <div>
+                <label for="canvasSize">Canvas Size (width and height)</label>
+                <input type="number" name="canvasSize" id="canvasSize" value="300" min="1">
+            </div>
+            <div>
+                <label for="opacity">Opacity of Cell Fill</label>
+                <input type="number" name="opacity" id="opacity" value="0.2" step="0.1" min="0" max="1">
+            </div>
+            <div>
+                <label for="speed">Speed in ms</label>
+                <input type="number" name="speed" id="speed" value="10" min="1">
+            </div>
+            <div>
+                <label for="pathLimit">Length of Path in Border mode</label>
+                <input type="number" name="pathLimit" id="pathLimit" value="30" min="1">
+            </div>
+            <div>
+                <label for="minimumOpacity">Minimum Opacity (0 - Infinity)</label>
+                <input type="text" name="minimumOpacity" id="minimumOpacity" value="1">
+            </div>
+            <div>
+                <label for="hueShift">Hue Shift</label>
+                <input type="number" name="hueShift" id="hueShift" value="0.5" step="0.1" min="0" max="360">
+            </div>
+            <div>
+                <label for="saturation">Saturation</label>
+                <input type="number" name="saturation" id="saturation" value="80" min="0" max="100">
+            </div>
+            <div>
+                <label for="lightness">Lightness</label>
+                <input type="number" name="lightness" id="lightness" value="75" min="0" max="100">
+            </div>
+
+            
+            <fieldset>
+                <legend>Format Type</legend>
+                <label for="format-full"><input type="radio" name="format" id="format-full" value="full"> Full (solid,
+                    no gaps)</label>
+                <label for="format-grid"><input type="radio" name="format" id="format-grid" value="grid" checked> Grid (solid,
+                    gaps)</label>
+                <label for="format-border"><input type="radio" name="format" id="format-border" value="border"> Border
+                    (outlines, has path)</label>
+            </fieldset>
+            
+            <div class="buttons">
+                <button type="button" onclick="play()">Play</button>
+                <button type="button" onclick="pause()">Pause</button>
+                <button>Restart</button>
+            </div>
+        </form>
+    </dialog>
+</body>
+
+</html>
