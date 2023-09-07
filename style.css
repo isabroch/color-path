@@ -11,7 +11,7 @@ body {
 }
 
 #grid {
-    border: 1px solid silver;
+    /* border: 1px solid silver; */
     margin-block-start: 1rem;
 }
 

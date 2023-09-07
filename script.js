@@ -207,6 +207,7 @@ function restart(opts) {
     canvasState.clear();
     i = 0;
     generateKeys();
+    document.querySelector('.message').innerHTML = `Press <kbd>shift + s</kbd> for settings!`;
     play([0, 0]);
 }
 
